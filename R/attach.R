@@ -1,4 +1,4 @@
-core <- c("tidySummarizedExperiment", "tidySingleCellExperiment", "tidyseurat", "plyranges", "nullranges", "tidybulk")
+core <- c("dplyr", "tidyr", "ggplot2", "tidySummarizedExperiment", "tidySingleCellExperiment", "tidyseurat", "plyranges", "nullranges", "tidybulk")
 
 core_unloaded <- function() {
   search <- paste0("package:", core)

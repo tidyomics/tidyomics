@@ -20,11 +20,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Hadley Wickham \email{hadley@rstudio.com}
+\strong{Maintainer}: Stefano Mangiola \email{mangiola.s@wehi.edu.au} (\href{https://orcid.org/0000-0001-7474-836X}{ORCID})
 
-Other contributors:
+Authors:
 \itemize{
-  \item RStudio [copyright holder, funder]
+  \item Michael Love \email{michaelisaiahlove@gmail.com} (\href{https://orcid.org/0000-0001-8401-0545}{ORCID})
 }
 
 }

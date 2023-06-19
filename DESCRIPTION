@@ -32,6 +32,9 @@ Imports:
     nullranges,
     tidybulk
 Suggests:
+    dplyr,
+    tidyr,
+    ggplot2,
     covr (>= 3.6.1),
     feather (>= 0.3.5),
     glue (>= 1.6.2),

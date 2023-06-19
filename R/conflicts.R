@@ -1,3 +1,26 @@
+#' @importFrom glue glue
+#' @importFrom rlang ns_env_name
+is_my_s3_generic = function(function_name , package_name){
+  
+  my_function = eval(parse(text=glue("{package_name}::`{function_name}`"))) 
+  if(!is(my_function, "function")) return(TRUE)
+  else  package_name ==  my_function |> ns_env_name()
+  
+}
+
+
+is_my_s3_generic_robust <- function(function_name , package_name) {
+  tryCatch(
+    {
+      is_my_s3_generic(function_name , package_name)
+    },
+    error=function(cond) {
+      return(TRUE)
+    }
+  )    
+}
+
+
 #' Conflicts between the tidyomics and other packages
 #'
 #' This function lists all the conflicts between packages in the tidyomics
@@ -7,6 +30,9 @@
 #' \code{union}, \code{setequal}, and \code{setdiff} from dplyr. These functions
 #' make the base equivalents generic, so shouldn't negatively affect any
 #' existing code.
+#' 
+#' @importFrom purrr map2
+#' @importFrom stringr str_remove
 #'
 #' @export
 #' @param only Set this to a character vector to restrict to conflicts only
@@ -21,9 +47,12 @@ tidyomics_conflicts <- function(only = NULL) {
     only <- union(only, core)
     envs <- envs[names(envs) %in% paste0("package:", only)]
   }
-
+  
   objs <- invert(lapply(envs, ls_env))
 
+  # Drop nonb generics
+  objs = map2(objs, names(objs), ~ { function_name = .y; .x |> purrr::keep(~ is_my_s3_generic_robust(function_name, .x |> str_remove("package:")))  }  )
+  
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
   tidy_names <- paste0("package:", tidyomics_packages())
@@ -109,3 +138,5 @@ ls_env <- function(env) {
 
   x
 }
+
+
