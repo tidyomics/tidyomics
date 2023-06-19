@@ -1,0 +1,48 @@
+Package: tidyomics
+Title: Easily Install and Load the 'tidyomics'
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Stefano",
+           family = "Mangiola",
+           role = c("aut", "cre"),
+           email = "mangiola.s@wehi.edu.au",
+           comment = c(ORCID = "0000-0001-7474-836X")),
+    person(given = "Michael",
+           family = "Love",
+           role = c("aut"),
+           email = "michaelisaiahlove@gmail.com",
+           comment = c(ORCID = "0000-0001-8401-0545"))
+	   )
+Description: The 'tidyomics' is a set of packages that work in harmony
+    because they share common data representations and 'API' design. This
+    package is designed to make it easy to install and load multiple
+    'tidyomics' packages in a single step. Learn more about the
+    'tidyomics' at <https://www.tidyomics.org>.
+License: MIT + file LICENSE
+URL: https://tidyomics.tidyomics.org,
+    https://github.com/tidy-biology/tidyomics
+BugReports: https://github.com/tidy-biology/tidyomics/issues
+Depends:
+    R (>= 4.2)
+Imports:
+    tidySummarizedExperiment,
+    tidySingleCellExperiment,
+    tidyseurat,
+    plyranges,
+    nullranges,
+    tidybulk
+Suggests:
+    covr (>= 3.6.1),
+    feather (>= 0.3.5),
+    glue (>= 1.6.2),
+    mockr (>= 0.2.0),
+    knitr (>= 1.41),
+    rmarkdown (>= 2.20),
+    testthat (>= 3.1.6)
+VignetteBuilder:
+    knitr
+Biarch: true
+biocViews: AssayDomain, Infrastructure, RNASeq, DifferentialExpression, GeneExpression, Normalization, Clustering, QualityControl, Sequencing, Transcription, Transcriptomics
+Config/testthat/edition: 3
+Encoding: UTF-8
+RoxygenNote: 7.2.3
