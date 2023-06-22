@@ -50,9 +50,6 @@ tidyomics_conflicts <- function(only = NULL) {
   
   objs <- invert(lapply(envs, ls_env))
 
-  # Drop non generics
-  objs = map2(objs, names(objs), ~ { function_name = .y; .x |> purrr::keep(~ is_my_s3_generic_robust(function_name, .x |> str_remove("package:")))  }  )
-  
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
   tidy_names <- paste0("package:", tidyomics_packages())

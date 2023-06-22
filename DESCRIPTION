@@ -1,6 +1,6 @@
 Package: tidyomics
 Title: Easily Install and Load the 'tidyomics'
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Stefano",
            family = "Mangiola",
