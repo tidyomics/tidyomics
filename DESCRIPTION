@@ -27,11 +27,13 @@ Depends:
 Imports:
     tidySummarizedExperiment,
     tidySingleCellExperiment,
+    tidySpatialExperiment,
     tidyseurat,
     plyranges,
     nullranges,
     tidybulk
 Suggests:
+    tidytof,
     dplyr,
     tidyr,
     ggplot2,
