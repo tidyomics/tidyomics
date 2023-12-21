@@ -12,104 +12,75 @@ knitr::opts_chunk$set(
 options(cli.hyperlink = FALSE)
 ```
 
-# tidyomics <a href='https://tidyomics.tidyomics.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
-
-<!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/tidyomics)](https://cran.r-project.org/package=tidyomics)
-[![R-CMD-check](https://github.com/tidy-biology/tidyomics/workflows/R-CMD-check/badge.svg)](https://github.com/tidy-biology/tidyomics/actions)
-[![Codecov test coverage](https://codecov.io/gh/tidy-biology/tidyomics/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidy-biology/tidyomics?branch=main)
-<!-- badges: end -->
 
 ## Overview
 
-The tidyomics is a set of packages that work in harmony because they share common data representations and API design. The __tidyomics__ package is designed to make it easy to install and load core packages from the tidyomics in a single command.
+The tidyomics is a set of packages that work in harmony because they share common data representations and API design, consistent with `tidyverse`. The __tidyomics__ package is designed to make it easy to install and load core packages from the tidyomics in a single command.
 
-If you'd like to learn how to use the tidyomics effectively, the best place to start is [R for data science](https://r4ds.had.co.nz).
+If you'd like to learn how to use the tidyomics effectively, the best place to start is [Bioconducotor workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
 
 ## Installation
 
-::: .pkgdown-release
-```{r eval = FALSE}
-# Install from CRAN
-install.packages("tidyomics")
-```
-:::
-
 ::: .pkgdown-devel
 ```{r eval = FALSE}
-# Install the development version from GitHub
-# install.packages("pak")
-pak::pak("tidy-biology/tidyomics")
+# Install from GitHub
+remotes::install_github("tidyomics/tidyomics")
 ```
 :::
 
-If you're compiling from source, you can run `pak::pkg_system_requirements("tidyomics")`, to see the complete set of system packages needed on your machine.
+::: .pkgdown-release
 
-## Usage
+Not yet finalised
+
+```{r eval = FALSE}
+BiocManager::install("tidyomics")
+```
+:::
 
 `library(tidyomics)` will load the core tidyomics packages: 
 
 * [ggplot2](https://ggplot2.tidyomics.org), for data visualisation.
 * [dplyr](https://dplyr.tidyomics.org), for data manipulation.
 * [tidyr](https://tidyr.tidyomics.org), for data tidying.
-* [readr](https://readr.tidyomics.org), for data import.
-* [purrr](https://purrr.tidyomics.org), for functional programming.
-* [tibble](https://tibble.tidyomics.org), for tibbles, a modern re-imagining of data frames.
-* [stringr](https://github.com/tidyomics/stringr), for strings.
-* [forcats](https://github.com/tidyomics/forcats), for factors.
-* [lubridate](https://github.com/tidyomics/lubridate), for date/times.
+* [tidySummarizedExperiment](https://tidySummarizedExperiment.tidyomics.org), for data import.
+* [tidySingleCellExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
+* [tidySpatialExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
+* [tidyseurat](https://tidyseurat.tidyomics.org), for tibbles, a modern re-imagining of data frames.
+* [plyranges](https://github.com/tidyomics/plyranges), for strings.
+* [nullranges](https://github.com/tidyomics/nullranges), for factors.
+* [tidybulk](https://github.com/tidyomics/tidybulk), for date/times.
 
-You also get a condensed summary of conflicts with other packages you have loaded:
+You also get a condensed summary of conflicts (that will decrease as the development progresses) with other packages you have loaded:
 
 ```{r example}
 library(tidyomics)
-```
-
-You can see conflicts created later with `tidyomics_conflicts()`:
-
-```{r conflicts}
-library(MASS)
-tidyomics_conflicts()
 ```
 
 And you can check that all tidyomics packages are up-to-date with `tidyomics_update()`:
 
 ```{r update, eval = FALSE}
 tidyomics_update()
-#> The following packages are out of date:
-#>  * broom (0.4.0 -> 0.4.1)
-#>  * DBI   (0.4.1 -> 0.5)
-#>  * Rcpp  (0.12.6 -> 0.12.7)
-#>  
-#> Start a clean R session then run:
-#> install.packages(c("broom", "DBI", "Rcpp"))
+#> All tidyomics packages up-to-date
 ```
 
 ## Packages
 
 As well as the core tidyomics, installing this package also installs a selection of other packages that you're likely to use frequently, but probably not in every analysis. This includes packages for:
 
-*   Working with specific types of vectors:
+*   Working with genomic features:
 
-    * [hms](https://github.com/tidyomics/hms), for times.
+    * [plyranges](https://github.com/tidyomics/plyranges), for strings.
+    * [nullranges](https://github.com/tidyomics/nullranges), for factors.
     
-*   Importing other types of data:
+*  Working with transcriptomic features:
 
-    * [feather](https://github.com/wesm/feather), for sharing with Python and other languages.
-    * [haven](https://github.com/tidyomics/haven), for SPSS, SAS and Stata files.
-    * [httr](https://github.com/r-lib/httr), for web apis.
-    * [jsonlite](https://github.com/jeroen/jsonlite) for JSON.
-    * [readxl](https://github.com/tidyomics/readxl), for `.xls` and `.xlsx` files.
-    * [rvest](https://github.com/tidyomics/rvest), for web scraping.
-    * [xml2](https://github.com/r-lib/xml2), for XML.
+    * [tidySummarizedExperiment](https://tidySummarizedExperiment.tidyomics.org), for data import.
+    * [tidySingleCellExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
+    * [tidySpatialExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
+    * [tidybulk](https://github.com/tidyomics/tidybulk), for date/times.
 
-*   Modelling
+*   Working with cytometry features:
 
-    * [modelr](https://github.com/tidyomics/modelr), for modelling within a pipeline
-    * [broom](https://github.com/tidymodels/broom), for turning models into 
-      tidy data
+    * Coming soon...
 
-## Code of Conduct
 
-Please note that the tidyomics project is released with a [Contributor Code of Conduct](https://tidyomics.tidyomics.org/CODE_OF_CONDUCT.html). 
-By contributing to this project, you agree to abide by its terms.
