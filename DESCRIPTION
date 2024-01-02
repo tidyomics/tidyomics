@@ -13,15 +13,13 @@ Authors@R: c(
            email = "michaelisaiahlove@gmail.com",
            comment = c(ORCID = "0000-0001-8401-0545"))
 	   )
-Description: The 'tidyomics' is a set of packages that work in harmony
-    because they share common data representations and 'API' design. This
-    package is designed to make it easy to install and load multiple
-    'tidyomics' packages in a single step. Learn more about the
-    'tidyomics' at <https://www.tidyomics.org>.
+Description: The tidyomics ecosystem is a set of packages for ’omic data analysis that work 
+  together in harmony; they share common data representations and API design, consistent with the
+  tidyverse ecosystem. The tidyomics package is designed to make it easy to install and load core 
+  packages from the tidyomics ecosystem with a single command.
 License: MIT + file LICENSE
-URL: https://tidyomics.tidyomics.org,
-    https://github.com/tidy-biology/tidyomics
-BugReports: https://github.com/tidy-biology/tidyomics/issues
+URL: https://github.com/tidyomics/tidyomics
+BugReports: https://github.com/tidyomics/tidyomics/issues
 Depends:
     R (>= 4.2)
 Imports:
@@ -29,11 +27,11 @@ Imports:
     tidySingleCellExperiment,
     tidySpatialExperiment,
     tidyseurat,
+    tidybulk,
     plyranges,
     nullranges,
-    tidybulk
+    tidytof
 Suggests:
-    tidytof,
     dplyr,
     tidyr,
     ggplot2,
