@@ -14,7 +14,7 @@ options(cli.hyperlink = FALSE)
 
 ## Overview
 
-The _tidyomics_ ecosystem is a set of packages for 'omic data analysis that work together in harmony; they share common data representations and API design, consistent with the [_tidyverse_](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
+The _tidyomics_ ecosystem is a set of packages for 'omic data analyses that work together in harmony; they share common data representations and API design, consistent with the [_tidyverse_](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
 
 If you'd like to learn how to use _tidyomics_ effectively, the best place to start is [Bioconducotor workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
 

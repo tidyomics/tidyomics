@@ -3,7 +3,7 @@
 
 ## Overview
 
-The *tidyomics* ecosystem is a set of packages for ’omic data analysis
+The *tidyomics* ecosystem is a set of packages for ’omic data analyses
 that work together in harmony; they share common data representations
 and API design, consistent with the
 [*tidyverse*](https://www.tidyverse.org/) ecosystem. The **tidyomics**
@@ -37,12 +37,10 @@ loaded with:
 library(tidyomics)
 #> Warning: package 'S4Vectors' was built under R version 4.3.2
 #> Warning: package 'GenomeInfoDb' was built under R version 4.3.2
-#> Warning: replacing previous import 'tidySingleCellExperiment::plot_ly' by
-#> 'ttservice::plot_ly' when loading 'tidySpatialExperiment'
 #> Warning: package 'tidybulk' was built under R version 4.3.2
-#> ── Attaching core tidyomics packages ──────────────────────── tidyomics 0.1.1 ──
+#> ── Attaching core tidyomics packages ──────────────────────── tidyomics 0.1.2 ──
 #> ✔ dplyr                    1.1.4      ✔ tidyseurat               0.7.9 
-#> ✔ ggplot2                  3.4.4      ✔ tidySingleCellExperiment 1.12.0
+#> ✔ ggplot2                  3.4.4      ✔ tidySingleCellExperiment 1.13.3
 #> ✔ nullranges               1.8.0      ✔ tidySpatialExperiment    0.99.8
 #> ✔ plyranges                1.22.0     ✔ tidySummarizedExperiment 1.11.8
 #> ✔ tidybulk                 1.14.3     ✔ tidytof                  0.0.0 
