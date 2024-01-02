@@ -12,75 +12,59 @@ knitr::opts_chunk$set(
 options(cli.hyperlink = FALSE)
 ```
 
-
 ## Overview
 
-The tidyomics is a set of packages that work in harmony because they share common data representations and API design, consistent with `tidyverse`. The __tidyomics__ package is designed to make it easy to install and load core packages from the tidyomics in a single command.
+The _tidyomics_ ecosystem is a set of packages for 'omic data analysis that work together in harmony; they share common data representations and API design, consistent with the [_tidyverse_](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
 
-If you'd like to learn how to use the tidyomics effectively, the best place to start is [Bioconducotor workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
+If you'd like to learn how to use _tidyomics_ effectively, the best place to start is [Bioconducotor workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
 
 ## Installation
 
-::: .pkgdown-devel
+The __tidyomics__ package can be installed from Github:
+
 ```{r eval = FALSE}
-# Install from GitHub
 remotes::install_github("tidyomics/tidyomics")
 ```
-:::
 
-::: .pkgdown-release
-
-Not yet finalised
+Installation via Bioconductor is coming soon:
 
 ```{r eval = FALSE}
 BiocManager::install("tidyomics")
 ```
-:::
 
-`library(tidyomics)` will load the core tidyomics packages: 
+## Loading the _tidyomics_ ecosystem
 
-* [ggplot2](https://ggplot2.tidyomics.org), for data visualisation.
-* [dplyr](https://dplyr.tidyomics.org), for data manipulation.
-* [tidyr](https://tidyr.tidyomics.org), for data tidying.
-* [tidySummarizedExperiment](https://tidySummarizedExperiment.tidyomics.org), for data import.
-* [tidySingleCellExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
-* [tidySpatialExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
-* [tidyseurat](https://tidyseurat.tidyomics.org), for tibbles, a modern re-imagining of data frames.
-* [plyranges](https://github.com/tidyomics/plyranges), for strings.
-* [nullranges](https://github.com/tidyomics/nullranges), for factors.
-* [tidybulk](https://github.com/tidyomics/tidybulk), for date/times.
-
-You also get a condensed summary of conflicts (that will decrease as the development progresses) with other packages you have loaded:
+The core _tidyomics_ packages and supporting _tidyverse_ packages can be loaded with:
 
 ```{r example}
 library(tidyomics)
 ```
 
-And you can check that all tidyomics packages are up-to-date with `tidyomics_update()`:
+This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
+
+You can also check that all _tidyomics_ packages are up-to-date:
 
 ```{r update, eval = FALSE}
 tidyomics_update()
-#> All tidyomics packages up-to-date
 ```
 
-## Packages
+## Included packages
 
-As well as the core tidyomics, installing this package also installs a selection of other packages that you're likely to use frequently, but probably not in every analysis. This includes packages for:
+The _tidyomics_ ecosystem includes packages for:
 
 *   Working with genomic features:
 
-    * [plyranges](https://github.com/tidyomics/plyranges), for strings.
-    * [nullranges](https://github.com/tidyomics/nullranges), for factors.
+    * [plyranges](https://github.com/sa-lee/plyranges), for tidy manipulation of genomic range data. 
+    * [nullranges](https://github.com/nullranges/nullranges), for tidy generation of genomic ranges representing the null hypothesis.
     
 *  Working with transcriptomic features:
 
-    * [tidySummarizedExperiment](https://tidySummarizedExperiment.tidyomics.org), for data import.
-    * [tidySingleCellExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
-    * [tidySpatialExperiment](https://tidySingleCellExperiment.tidyomics.org), for functional programming.
-    * [tidybulk](https://github.com/tidyomics/tidybulk), for date/times.
+    * [tidySummarizedExperiment](https://github.com/stemangiola/tidySummarizedExperiment), for tidy manipulation of SummarizedExperiment objects.
+    * [tidySingleCellExperiment](https://github.com/stemangiola/tidySingleCellExperiment), for tidy manipulation of SingleCellExperiment objects.
+    * [tidySpatialExperiment](https://github.com/william-hutchison/tidySpatialExperiment), for tidy manipulation of SpatialExperiment objects.
+    * [tidyseurat](https://github.com/stemangiola/tidyseurat), for tidy manipulation of Seurat objects.
+    * [tidybulk](https://github.com/stemangiola/tidybulk), for tidy bulk RNA-seq data analysis.
 
 *   Working with cytometry features:
 
     * Coming soon...
-
-
