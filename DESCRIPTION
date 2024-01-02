@@ -35,8 +35,6 @@ Suggests:
     dplyr,
     tidyr,
     ggplot2,
-    covr (>= 3.6.1),
-    feather (>= 0.3.5),
     glue (>= 1.6.2),
     mockr (>= 0.2.0),
     knitr (>= 1.41),

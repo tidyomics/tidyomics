@@ -8,14 +8,13 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-The 'tidyomics' is a set of packages that work in harmony because they share common data representations and 'API' design. This package is designed to make it easy to install and load multiple 'tidyomics' packages in a single step. Learn more about the 'tidyomics' at \url{https://www.tidyomics.org}.
+The tidyomics ecosystem is a set of packages for ’omic data analysis that work together in harmony; they share common data representations and API design, consistent with the tidyverse ecosystem. The tidyomics package is designed to make it easy to install and load core packages from the tidyomics ecosystem with a single command.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://tidyomics.tidyomics.org}
-  \item \url{https://github.com/tidy-biology/tidyomics}
-  \item Report bugs at \url{https://github.com/tidy-biology/tidyomics/issues}
+  \item \url{https://github.com/tidyomics/tidyomics}
+  \item Report bugs at \url{https://github.com/tidyomics/tidyomics/issues}
 }
 
 }
