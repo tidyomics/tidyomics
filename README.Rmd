@@ -67,4 +67,4 @@ The _tidyomics_ ecosystem includes packages for:
 
 *   Working with cytometry features:
 
-    * Coming soon...
+    * [tidytof](https://github.com/keyes-timothy/tidytof), for tidy manipulation of high-dimensional cytometry data.

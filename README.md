@@ -41,16 +41,17 @@ library(tidyomics)
 #> 'ttservice::plot_ly' when loading 'tidySpatialExperiment'
 #> Warning: package 'tidybulk' was built under R version 4.3.2
 #> ── Attaching core tidyomics packages ──────────────────────── tidyomics 0.1.1 ──
-#> ✔ dplyr                    1.1.4      ✔ tidyr                    1.3.0 
-#> ✔ ggplot2                  3.4.4      ✔ tidyseurat               0.7.9 
-#> ✔ nullranges               1.8.0      ✔ tidySingleCellExperiment 1.12.0
-#> ✔ plyranges                1.22.0     ✔ tidySpatialExperiment    0.99.8
-#> ✔ tidybulk                 1.14.3     ✔ tidySummarizedExperiment 1.11.8
+#> ✔ dplyr                    1.1.4      ✔ tidyseurat               0.7.9 
+#> ✔ ggplot2                  3.4.4      ✔ tidySingleCellExperiment 1.12.0
+#> ✔ nullranges               1.8.0      ✔ tidySpatialExperiment    0.99.8
+#> ✔ plyranges                1.22.0     ✔ tidySummarizedExperiment 1.11.8
+#> ✔ tidybulk                 1.14.3     ✔ tidytof                  0.0.0 
+#> ✔ tidyr                    1.3.0      
 #> ── Conflicts ────────────────────────────────────────── tidyomics_conflicts() ──
 #> ✖ tidyseurat::aggregate_cells()                          masks tidySpatialExperiment::aggregate_cells(), tidySingleCellExperiment::aggregate_cells(), ttservice::aggregate_cells()
 #> ✖ plyranges::between()                                   masks dplyr::between()
 #> ✖ tidybulk::bind_cols()                                  masks ttservice::bind_cols(), dplyr::bind_cols()
-#> ✖ tidybulk::filter()                                     masks plyranges::filter(), dplyr::filter(), stats::filter()
+#> ✖ plyranges::filter()                                    masks tidybulk::filter(), dplyr::filter(), stats::filter()
 #> ✖ plyranges::n()                                         masks dplyr::n()
 #> ✖ plyranges::n_distinct()                                masks dplyr::n_distinct()
 #> ✖ tidybulk::rename()                                     masks S4Vectors::rename(), dplyr::rename()
@@ -95,4 +96,5 @@ The *tidyomics* ecosystem includes packages for:
 
 - Working with cytometry features:
 
-  - Coming soon…
+  - [tidytof](https://github.com/keyes-timothy/tidytof), for tidy
+    manipulation of high-dimensional cytometry data.
