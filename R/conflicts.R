@@ -1,25 +1,29 @@
-#' @importFrom glue glue
-#' @importFrom rlang ns_env_name
-is_my_s3_generic = function(function_name , package_name){
-  
-  my_function = eval(parse(text=glue("{package_name}::`{function_name}`"))) 
-  if(!is(my_function, "function")) return(TRUE)
-  else  package_name ==  my_function |> ns_env_name()
-  
-}
-
-
-is_my_s3_generic_robust <- function(function_name , package_name) {
-  tryCatch(
-    {
-      is_my_s3_generic(function_name , package_name)
-    },
-    error=function(cond) {
-      return(TRUE)
-    }
-  )    
-}
-
+# #' Check for generic S3 
+# #' 
+# #' @importFrom glue glue
+# #' @importFrom rlang ns_env_name
+# #' @noRd
+# is_my_s3_generic = function(function_name , package_name){
+#   
+#   my_function = eval(parse(text=glue("{package_name}::`{function_name}`"))) 
+#   if(!is(my_function, "function")) return(TRUE)
+#   else  package_name ==  my_function |> ns_env_name()
+#   
+# }
+# 
+# #' Check for robust S3 
+# #' 
+# #' @noRd
+# is_my_s3_generic_robust <- function(function_name , package_name) {
+#   tryCatch(
+#     {
+#       is_my_s3_generic(function_name , package_name)
+#     },
+#     error=function(cond) {
+#       return(TRUE)
+#     }
+#   )    
+# }
 
 #' Conflicts between the tidyomics and other packages
 #'
@@ -31,14 +35,17 @@ is_my_s3_generic_robust <- function(function_name , package_name) {
 #' make the base equivalents generic, so shouldn't negatively affect any
 #' existing code.
 #' 
-#' @importFrom purrr map2
-#' @importFrom stringr str_remove
-#'
-#' @export
 #' @param only Set this to a character vector to restrict to conflicts only
 #'   with these packages.
 #' @examples
 #' tidyomics_conflicts()
+#' 
+#' @importFrom purrr set_names
+#' @importFrom purrr keep
+#' @importFrom purrr imap
+#' @importFrom purrr set_names
+#' @importFrom stringr str_remove
+#' @export
 tidyomics_conflicts <- function(only = NULL) {
   envs <- grep("^package:", search(), value = TRUE)
   envs <- purrr::set_names(envs)
@@ -61,6 +68,20 @@ tidyomics_conflicts <- function(only = NULL) {
   structure(conflict_funs, class = "tidyomics_conflicts")
 }
 
+#' Generate conflict message
+#' 
+#' @importFrom cli rule
+#' @importFrom cli style_bold
+#' @importFrom cli col_blue
+#' @importFrom cli col_green
+#' @importFrom cli col_red
+#' @importFrom cli col_cyan
+#' @importFrom cli symbol
+#' @importFrom cli format_inline
+#' @importFrom purrr map
+#' @importFrom purrr map_chr
+#' @importFrom purrr map2_chr
+#' @noRd
 tidyomics_conflict_message <- function(x) {
   header <- cli::rule(
     left = cli::style_bold("Conflicts"),
@@ -93,12 +114,16 @@ tidyomics_conflict_message <- function(x) {
   )
 }
 
+#' @importFrom cli cat_line
 #' @export
 print.tidyomics_conflicts <- function(x, ..., startup = FALSE) {
   cli::cat_line(tidyomics_conflict_message(x))
   invisible(x)
 }
 
+#' @importFrom purrr map
+#' @importFrom purrr keep
+#' @noRd
 confirm_conflict <- function(packages, name) {
   # Only look at functions
   objs <- packages |>
@@ -117,6 +142,7 @@ confirm_conflict <- function(packages, name) {
   packages
 }
 
+#' @noRd
 ls_env <- function(env) {
   x <- ls(pos = env)
 
@@ -134,5 +160,3 @@ ls_env <- function(env) {
 
   x
 }
-
-

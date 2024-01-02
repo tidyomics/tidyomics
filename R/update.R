@@ -3,13 +3,17 @@
 #' This will check to see if all tidyomics packages (and optionally, their
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
-#'
+#' 
 #' @inheritParams tidyomics_deps
-#' @export
 #' @examples
 #' \dontrun{
 #' tidyomics_update()
 #' }
+#' 
+#' @importFrom cli cat_line
+#' @importFrom cli cat_bullet
+#' @importFrom dplyr filter
+#' @export
 tidyomics_update <- function(recursive = FALSE, repos = getOption("repos")) {
 
   deps <- tidyomics_deps(recursive, repos)
@@ -41,7 +45,14 @@ tidyomics_update <- function(recursive = FALSE, repos = getOption("repos")) {
 #' well as all tidyomics packages. It's primarily designed to help you get
 #' a quick idea of what's going on when you're helping someone else debug
 #' a problem.
-#'
+#' 
+#' @importFrom cli cat_rule
+#' @importFrom cli cat_bullet
+#' @importFrom cli col_yellow
+#' @importFrom cli style_bold
+#' @importFrom cli col_blue
+#' @importFrom rstudioapi isAvailable
+#' @importFrom rstudioapi getVersion
 #' @export
 tidyomics_sitrep <- function() {
   cli::cat_rule("R & RStudio")
@@ -70,6 +81,12 @@ tidyomics_sitrep <- function() {
 #'   tidyomics packages.
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOption("repos")}.
+#'
+#' @importFrom utils available.packages
+#' @importFrom tools package_dependencies
+#' @importFrom purrr map_chr
+#' @importFrom purrr map2_lgl
+#' @importFrom tibble tibble 
 #' @export
 tidyomics_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   pkgs <- utils::available.packages(repos = repos)
@@ -100,6 +117,9 @@ tidyomics_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   )
 }
 
+#' @importFrom rlang is_installed
+#' @importFrom utils packageVersion
+#' @noRd
 packageVersion <- function(pkg) {
   if (rlang::is_installed(pkg)) {
     utils::packageVersion(pkg)

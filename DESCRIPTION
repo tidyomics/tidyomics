@@ -30,12 +30,18 @@ Imports:
     tidybulk,
     plyranges,
     nullranges,
-    tidytof
+    tidytof,
+    tibble, 
+    dplyr, 
+    purrr, 
+    rlang, 
+    stringr,
+    cli,
+    rstudioapi,
+    glue (>= 1.6.2)
 Suggests:
-    dplyr,
     tidyr,
     ggplot2,
-    glue (>= 1.6.2),
     mockr (>= 0.2.0),
     knitr (>= 1.41),
     rmarkdown (>= 2.20),

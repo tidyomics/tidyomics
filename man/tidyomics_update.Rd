@@ -22,4 +22,5 @@ confirmation.
 \dontrun{
 tidyomics_update()
 }
+
 }

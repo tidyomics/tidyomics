@@ -1,3 +1,5 @@
+#' @importFrom rlang inform
+#' @noRd
 inform_startup <- function(msg, ...) {
   if (is.null(msg)) {
     return()
@@ -12,9 +14,11 @@ inform_startup <- function(msg, ...) {
 #' List all packages in the tidyomics
 #'
 #' @param include_self Include tidyomics in the list?
-#' @export
 #' @examples
 #' tidyomics_packages()
+#' 
+#' @importFrom utils packageDescription
+#' @export
 tidyomics_packages <- function(include_self = TRUE) {
   raw <- utils::packageDescription("tidyomics")$Imports
   imports <- strsplit(raw, ",")[[1]]
@@ -28,6 +32,8 @@ tidyomics_packages <- function(include_self = TRUE) {
   names
 }
 
+#' @importFrom utils stack
+#' @noRd
 invert <- function(x) {
   if (length(x) == 0) return()
   stacked <- utils::stack(x)

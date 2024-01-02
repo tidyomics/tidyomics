@@ -22,4 +22,5 @@ existing code.
 }
 \examples{
 tidyomics_conflicts()
+
 }
