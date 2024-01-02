@@ -12,3 +12,7 @@ well as all tidyomics packages. It's primarily designed to help you get
 a quick idea of what's going on when you're helping someone else debug
 a problem.
 }
+\examples{
+tidyomics_sitrep()
+
+}

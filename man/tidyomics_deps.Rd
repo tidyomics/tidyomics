@@ -16,3 +16,9 @@ Defaults to \code{getOption("repos")}.}
 \description{
 List all tidyomics dependencies
 }
+\examples{
+\dontrun{
+  tidyomics_deps()
+}
+
+}

@@ -46,6 +46,9 @@ tidyomics_update <- function(recursive = FALSE, repos = getOption("repos")) {
 #' a quick idea of what's going on when you're helping someone else debug
 #' a problem.
 #' 
+#' @examples
+#' tidyomics_sitrep()
+#' 
 #' @importFrom cli cat_rule
 #' @importFrom cli cat_bullet
 #' @importFrom cli col_yellow
@@ -81,7 +84,11 @@ tidyomics_sitrep <- function() {
 #'   tidyomics packages.
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOption("repos")}.
-#'
+#' @examples
+#' \dontrun{
+#'   tidyomics_deps()
+#' }
+#' 
 #' @importFrom utils available.packages
 #' @importFrom tools package_dependencies
 #' @importFrom purrr map_chr

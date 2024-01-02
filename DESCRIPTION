@@ -5,7 +5,7 @@ Authors@R: c(
     person(given = "Stefano",
            family = "Mangiola",
            role = c("aut", "cre"),
-           email = "mangiola.s@wehi.edu.au",
+           email = "mangiolastefano@gmail.com",
            comment = c(ORCID = "0000-0001-7474-836X")),
     person(given = "Michael",
            family = "Love",
@@ -35,7 +35,9 @@ Imports:
     rlang, 
     stringr,
     cli,
-    rstudioapi
+    rstudioapi,
+    tools, 
+    utils
 Suggests:
     tidyr,
     ggplot2,

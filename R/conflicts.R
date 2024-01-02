@@ -92,7 +92,7 @@ tidyomics_conflict_message <- function(x) {
 print.tidyomics_conflicts <- function(x, ..., startup = FALSE) {
   cli::cat_line(tidyomics_conflict_message(x))
   invisible(x)
-}
+  }
 
 #' @importFrom purrr map
 #' @importFrom purrr keep
