@@ -1,30 +1,3 @@
-# #' Check for generic S3 
-# #' 
-# #' @importFrom glue glue
-# #' @importFrom rlang ns_env_name
-# #' @noRd
-# is_my_s3_generic = function(function_name , package_name){
-#   
-#   my_function = eval(parse(text=glue("{package_name}::`{function_name}`"))) 
-#   if(!is(my_function, "function")) return(TRUE)
-#   else  package_name ==  my_function |> ns_env_name()
-#   
-# }
-# 
-# #' Check for robust S3 
-# #' 
-# #' @noRd
-# is_my_s3_generic_robust <- function(function_name , package_name) {
-#   tryCatch(
-#     {
-#       is_my_s3_generic(function_name , package_name)
-#     },
-#     error=function(cond) {
-#       return(TRUE)
-#     }
-#   )    
-# }
-
 #' Conflicts between the tidyomics and other packages
 #'
 #' This function lists all the conflicts between packages in the tidyomics

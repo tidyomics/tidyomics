@@ -1,7 +1,7 @@
 core <- 
   c(
     "dplyr", "tidyr", "ggplot2", "tidySummarizedExperiment", "tidySingleCellExperiment", 
-    "tidySpatialExperiment", "tidyseurat", "tidybulk", "plyranges", "nullranges", "tidytof"
+    "tidyseurat", "tidybulk", "plyranges", "nullranges"
   )
 
 #' @noRd
