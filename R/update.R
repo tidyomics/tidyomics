@@ -47,7 +47,9 @@ tidyomics_update <- function(recursive = FALSE, repos = getOption("repos")) {
 #' a problem.
 #' 
 #' @examples
+#' \dontrun{
 #' tidyomics_sitrep()
+#' }
 #' 
 #' @importFrom cli cat_rule
 #' @importFrom cli cat_bullet
