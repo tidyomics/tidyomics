@@ -10,6 +10,9 @@ tidyomics_conflicts(only = NULL)
 \item{only}{Set this to a character vector to restrict to conflicts only
 with these packages.}
 }
+\value{
+All conflicts between tidyomics packages and other packages that you have loaded.
+}
 \description{
 This function lists all the conflicts between packages in the tidyomics
 and other packages that you have loaded.

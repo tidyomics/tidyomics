@@ -10,7 +10,7 @@
 #' 
 #' @param only Set this to a character vector to restrict to conflicts only
 #'   with these packages.
-#'   
+#' @return All conflicts between tidyomics packages and other packages that you have loaded.
 #' @examples
 #' tidyomics_conflicts()
 #' 

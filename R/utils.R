@@ -11,9 +11,10 @@ inform_startup <- function(msg, ...) {
   rlang::inform(msg, ..., class = "packageStartupMessage")
 }
 
-#' List all packages in the tidyomics
+#' List all packages loaded by the tidyomics metapackage
 #'
 #' @param include_self Include tidyomics in the list?
+#' @return All packages loaded by the tidyomics metapackage.
 #' @examples
 #' tidyomics_packages()
 #' 

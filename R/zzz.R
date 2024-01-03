@@ -1,3 +1,4 @@
+#' @noRd
 .onAttach <- function(...) {
   attached <- tidyomics_attach()
   if (!is_loading_for_tests()) {
@@ -10,10 +11,12 @@
   }
 }
 
+#' @noRd
 is_attached <- function(x) {
   paste0("package:", x) %in% search()
 }
 
+#' @noRd
 is_loading_for_tests <- function() {
   !interactive() && identical(Sys.getenv("DEVTOOLS_LOAD"), "tidyomics")
 }
