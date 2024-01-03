@@ -11,7 +11,12 @@ Authors@R: c(
            family = "Love",
            role = c("aut"),
            email = "michaelisaiahlove@gmail.com",
-           comment = c(ORCID = "0000-0001-8401-0545"))
+           comment = c(ORCID = "0000-0001-8401-0545")),
+    person(given = "William",
+           family = "Hutchison",
+           role = c("aut"),
+           email = "hutchison.w@wehi.edu.au",
+           comment = c(ORCID = "0009-0001-6242-4269"))
 	   )
 Description: The tidyomics ecosystem is a set of packages for ’omic data analysis that work 
     together in harmony; they share common data representations and API design, consistent with the
