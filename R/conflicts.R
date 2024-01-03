@@ -10,6 +10,7 @@
 #' 
 #' @param only Set this to a character vector to restrict to conflicts only
 #'   with these packages.
+#'   
 #' @examples
 #' tidyomics_conflicts()
 #' 
