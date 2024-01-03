@@ -109,12 +109,6 @@ will be addressed over time.
 ``` r
 library(tidytof)
 library(tidySpatialExperiment)
-#> Loading required package: SpatialExperiment
-#> 
-#> Attaching package: 'tidySpatialExperiment'
-#> The following object is masked from 'package:tidySingleCellExperiment':
-#> 
-#>     unnest_single_cell_experiment
 ```
 
 You are now ready to start using the *tidyomics* ecosystem.
