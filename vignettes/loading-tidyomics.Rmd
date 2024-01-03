@@ -15,15 +15,16 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "# "
 )
 ```
+
 
 ## Overview
 
 The _tidyomics_ ecosystem is a set of packages for 'omic data analyses that work together in harmony; they share common data representations and API design, consistent with the [_tidyverse_](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
 
-If you would like to learn how to use _tidyomics_ effectively, the best place to start is [Bioconducotor workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
+If you would like to learn how to use _tidyomics_ effectively, the best place to start is the [Bioconducotor Workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
 
 ## Included packages
 
@@ -71,7 +72,7 @@ library(tidyomics)
 
 This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
 
-__tidytof__ and __tidySpatialExperiment__ be loaded independently:
+__tidytof__ and __tidySpatialExperiment__ can be loaded independently:
 
 ```{r eval = FALSE}
 library(tidytof)
