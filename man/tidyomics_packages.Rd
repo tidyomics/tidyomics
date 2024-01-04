@@ -2,16 +2,20 @@
 % Please edit documentation in R/utils.R
 \name{tidyomics_packages}
 \alias{tidyomics_packages}
-\title{List all packages in the tidyomics}
+\title{List all packages loaded by the tidyomics metapackage}
 \usage{
 tidyomics_packages(include_self = TRUE)
 }
 \arguments{
 \item{include_self}{Include tidyomics in the list?}
 }
+\value{
+All packages loaded by the tidyomics metapackage.
+}
 \description{
-List all packages in the tidyomics
+List all packages loaded by the tidyomics metapackage
 }
 \examples{
 tidyomics_packages()
+
 }

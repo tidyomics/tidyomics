@@ -1,45 +1,49 @@
 Package: tidyomics
-Title: Easily Install and Load the 'tidyomics'
-Version: 0.1.1
+Title: Easily install and load the tidyomics ecosystem
+Version: 0.1.5
 Authors@R: c(
     person(given = "Stefano",
            family = "Mangiola",
            role = c("aut", "cre"),
-           email = "mangiola.s@wehi.edu.au",
+           email = "mangiolastefano@gmail.com",
            comment = c(ORCID = "0000-0001-7474-836X")),
     person(given = "Michael",
            family = "Love",
            role = c("aut"),
            email = "michaelisaiahlove@gmail.com",
-           comment = c(ORCID = "0000-0001-8401-0545"))
+           comment = c(ORCID = "0000-0001-8401-0545")),
+    person(given = "William",
+           family = "Hutchison",
+           role = c("aut"),
+           email = "hutchison.w@wehi.edu.au",
+           comment = c(ORCID = "0009-0001-6242-4269"))
 	   )
-Description: The 'tidyomics' is a set of packages that work in harmony
-    because they share common data representations and 'API' design. This
-    package is designed to make it easy to install and load multiple
-    'tidyomics' packages in a single step. Learn more about the
-    'tidyomics' at <https://www.tidyomics.org>.
+Description: The tidyomics ecosystem is a set of packages for ’omic data analysis that work 
+    together in harmony; they share common data representations and API design, consistent with the
+    tidyverse ecosystem. The tidyomics package is designed to make it easy to install and load core 
+    packages from the tidyomics ecosystem with a single command.
 License: MIT + file LICENSE
-URL: https://tidyomics.tidyomics.org,
-    https://github.com/tidy-biology/tidyomics
-BugReports: https://github.com/tidy-biology/tidyomics/issues
+URL: https://github.com/tidyomics/tidyomics
+BugReports: https://github.com/tidyomics/tidyomics/issues
 Depends:
     R (>= 4.2)
 Imports:
     tidySummarizedExperiment,
     tidySingleCellExperiment,
-    tidySpatialExperiment,
     tidyseurat,
+    tidybulk,
     plyranges,
     nullranges,
-    tidybulk
+    purrr, 
+    rlang, 
+    stringr,
+    cli,
+    utils
 Suggests:
-    tidytof,
-    dplyr,
     tidyr,
+    dplyr, 
+    tibble, 
     ggplot2,
-    covr (>= 3.6.1),
-    feather (>= 0.3.5),
-    glue (>= 1.6.2),
     mockr (>= 0.2.0),
     knitr (>= 1.41),
     rmarkdown (>= 2.20),

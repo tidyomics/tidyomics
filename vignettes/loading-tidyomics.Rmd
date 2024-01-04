@@ -1,16 +1,24 @@
 ---
-output: github_document
+title: "Loading the _tidyomics_ ecosystem"
+author: "William Hutchison"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+description: > 
+  A simple demonstration of installing and loading the tidyomics ecosystem using the tidyomics
+  metapackage.
+vignette: >
+  %\VignetteIndexEntry{Loading the tidyomics ecosystem}
+  %\VignetteEngine{knitr::knitr}
+  %\VignetteEncoding{UTF-8}
 ---
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "# ",
-  fig.path = "README-"
+  comment = "# "
 )
-options(cli.hyperlink = FALSE)
 ```
+
 
 ## Overview
 
