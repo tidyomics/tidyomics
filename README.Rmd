@@ -16,7 +16,7 @@ options(cli.hyperlink = FALSE)
 
 The _tidyomics_ ecosystem is a set of packages for 'omic data analyses that work together in harmony; they share common data representations and API design, consistent with the [_tidyverse_](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
 
-If you would like to learn how to use _tidyomics_ effectively, the best place to start is the [Bioconducotor Workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
+If you would like to learn how to use _tidyomics_, try looking over our [blog](https://tidyomics.github.io/tidyomicsBlog/) or the [Bioconducotor Workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
 
 ## Included packages
 
@@ -27,6 +27,7 @@ The _tidyomics_ ecosystem includes packages for:
     * [plyranges](https://github.com/sa-lee/plyranges), for tidy manipulation of genomic range data. 
     * [nullranges](https://github.com/nullranges/nullranges), for tidy generation of genomic ranges representing the null hypothesis.
     * [plyinteractions](https://github.com/tidyomics/plyinteractions), for tidy manipulation of genomic interaction data.
+    
     
 *  Working with transcriptomic features:
 
