@@ -10,9 +10,9 @@ and API design, consistent with the
 package is designed to make it easy to install and load core packages
 from the *tidyomics* ecosystem with a single command.
 
-If you would like to learn how to use *tidyomics* effectively, the best
-place to start is the [Bioconducotor Workshop
-2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
+If you would like to learn how to use *tidyomics*, try looking over our
+[blog](https://tidyomics.github.io/tidyomicsBlog/) or the [Bioconducotor
+Workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
 
 ## Included packages
 
@@ -73,12 +73,12 @@ loaded with:
 library(tidyomics)
 #  Warning: package 'S4Vectors' was built under R version 4.3.2
 #  Warning: package 'GenomeInfoDb' was built under R version 4.3.2
-#  ── Attaching core tidyomics packages ──────────────────────── tidyomics 0.1.5 ──
-#  ✔ dplyr                    1.1.4      ✔ tidyr                    1.3.0 
-#  ✔ ggplot2                  3.4.4      ✔ tidyseurat               0.7.9 
-#  ✔ nullranges               1.8.0      ✔ tidySingleCellExperiment 1.13.3
-#  ✔ plyranges                1.22.0     ✔ tidySummarizedExperiment 1.12.0
-#  ✔ tidybulk                 1.15.4     
+#  ── Attaching core tidyomics packages ──────────────────────── tidyomics 0.1.6 ──
+#  ✔ dplyr                    1.1.4      ✔ tidySummarizedExperiment 1.12.0
+#  ✔ ggplot2                  3.4.4      ✔ tidybulk                 1.15.4
+#  ✔ nullranges               1.8.0      ✔ tidyr                    1.3.0 
+#  ✔ plyranges                1.22.0     ✔ tidyseurat               0.7.9 
+#  ✔ tidySingleCellExperiment 1.13.3     
 #  ── Conflicts ────────────────────────────────────────── tidyomics_conflicts() ──
 #  ✖ plyranges::between()     masks dplyr::between()
 #  ✖ tidybulk::bind_cols()    masks ttservice::bind_cols(), dplyr::bind_cols()
