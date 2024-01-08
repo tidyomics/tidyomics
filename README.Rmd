@@ -26,6 +26,7 @@ The _tidyomics_ ecosystem includes packages for:
 
     * [plyranges](https://github.com/sa-lee/plyranges), for tidy manipulation of genomic range data. 
     * [nullranges](https://github.com/nullranges/nullranges), for tidy generation of genomic ranges representing the null hypothesis.
+    * [plyinteractions](https://github.com/tidyomics/plyinteractions), for tidy manipulation of genomic interaction data.
     
 *  Working with transcriptomic features:
 
@@ -47,9 +48,10 @@ The __tidyomics__ package can be installed from Github:
 remotes::install_github("tidyomics/tidyomics")
 ```
 
-This will automatically install most packages in the _tidyomics_ ecosystem. The __tidytof__ and __tidySpatialExperiment__ packages are not yet available for automatic installation. For the time being, they can be installed independently: 
+This will automatically install most packages in the _tidyomics_ ecosystem. The __plyinteractions__, __tidytof__ and __tidySpatialExperiment__ packages are not yet available for automatic installation. For the time being, they can be installed independently: 
 
 ```{r eval = FALSE}
+BiocManager::install("tidyomics/plyinteractions")
 devtools::install_github("keyes-timothy/tidytof")
 devtools::install_github("william-hutchison/tidySpatialExperiment")
 ```
@@ -64,9 +66,10 @@ library(tidyomics)
 
 This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
 
-__tidytof__ and __tidySpatialExperiment__ can be loaded independently:
+__plyinteractions__, __tidytof__ and __tidySpatialExperiment__ can be loaded independently:
 
 ```{r eval = FALSE}
+library(plyinteractions)
 library(tidytof)
 library(tidySpatialExperiment)
 ```
