@@ -14,13 +14,7 @@ options(cli.hyperlink = FALSE)
 
 ## Overview
 
-The [tidyomics](https://github.com/tidyomics)
-ecosystem is a set of packages for omics data analysis
-that work together in harmony; they share common Bioconductor data
-representations and API design, consistent with the
-[tidyverse](https://www.tidyverse.org/) ecosystem. 
-The __tidyomics__ package is designed to make it easy to install and
-load core packages from the _tidyomics_ ecosystem with a single command.
+The [tidyomics](https://github.com/tidyomics) ecosystem is a set of packages for omics data analysis that work together in harmony; they share common Bioconductor data representations and API design consistent with the [tidyverse](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
 
 The core packages are:
 
@@ -28,19 +22,20 @@ https://github.com/tidyomics/tidyomics/blob/690945b0ffa23c2b084a66c174fba5696028
 
 ## Installation
 
-The __tidyomics__ package can be installed from Github:
+The __tidyomics__ package can be installed from GitHub:
 
 ```{r eval = FALSE}
 remotes::install_github("tidyomics/tidyomics")
 ```
 
-This will automatically install most packages in the _tidyomics_ ecosystem. The __plyinteractions__, __tidytof__ and __tidySpatialExperiment__ packages are not yet available for automatic installation. For the time being, they can be installed independently: 
+The __plyinteractions__, __tidySpatialExperiment__ and __tidytof__ packages are not yet available for automatic installation. For the time being, __plyinteractions__ and __tidySpatialExperiment__ can be installed independently: 
 
 ```{r eval = FALSE}
 BiocManager::install("tidyomics/plyinteractions")
-devtools::install_github("keyes-timothy/tidytof")
-devtools::install_github("william-hutchison/tidySpatialExperiment")
+BiocManager::install("william-hutchison/tidySpatialExperiment")
 ```
+
+And __tidytof__ can be installed via [GitHub](https://github.com/keyes-timothy/tidytof).
 
 ## Loading the _tidyomics_ ecosystem
 
@@ -52,12 +47,12 @@ library(tidyomics)
 
 This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
 
-__plyinteractions__, __tidytof__ and __tidySpatialExperiment__ can be loaded independently:
+__plyinteractions__, __tidySpatialExperiment__ and __tidytof__ can be loaded independently:
 
 ```{r eval = FALSE}
 library(plyinteractions)
-library(tidytof)
 library(tidySpatialExperiment)
+library(tidytof)
 ```
 
 You are now ready to start using the _tidyomics_ ecosystem.
