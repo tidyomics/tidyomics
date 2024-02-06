@@ -21,64 +21,45 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The _tidyomics_ ecosystem is a set of packages for 'omic data analyses that work together in harmony; they share common data representations and API design, consistent with the [_tidyverse_](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
+The [tidyomics](https://github.com/tidyomics) ecosystem is a set of packages for omics data analysis that work together in harmony; they share common Bioconductor data representations and API design consistent with the [tidyverse](https://www.tidyverse.org/) ecosystem. The __tidyomics__ package is designed to make it easy to install and load core packages from the _tidyomics_ ecosystem with a single command.
 
-If you would like to learn how to use _tidyomics_ effectively, the best place to start is the [Bioconducotor Workshop 2023](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/).
+The core packages are:
 
-## Included packages
-
-The _tidyomics_ ecosystem includes packages for:
-
-*   Working with genomic features:
-
-    * [plyranges](https://github.com/sa-lee/plyranges), for tidy manipulation of genomic range data. 
-    * [nullranges](https://github.com/nullranges/nullranges), for tidy generation of genomic ranges representing the null hypothesis.
-    * [plyinteractions](https://github.com/tidyomics/plyinteractions), for tidy manipulation of genomic interaction data.
-    
-*  Working with transcriptomic features:
-
-    * [tidySummarizedExperiment](https://github.com/stemangiola/tidySummarizedExperiment), for tidy manipulation of SummarizedExperiment objects.
-    * [tidySingleCellExperiment](https://github.com/stemangiola/tidySingleCellExperiment), for tidy manipulation of SingleCellExperiment objects.
-    * [tidySpatialExperiment](https://github.com/william-hutchison/tidySpatialExperiment), for tidy manipulation of SpatialExperiment objects.
-    * [tidyseurat](https://github.com/stemangiola/tidyseurat), for tidy manipulation of Seurat objects.
-    * [tidybulk](https://github.com/stemangiola/tidybulk), for tidy bulk RNA-seq data analysis.
-
-*   Working with cytometry features:
-
-    * [tidytof](https://github.com/keyes-timothy/tidytof), for tidy manipulation of high-dimensional cytometry data.
+https://github.com/tidyomics/tidyomics/blob/690945b0ffa23c2b084a66c174fba5696028af87/R/attach.R#L3-L4
 
 ## Installation
 
-The __tidyomics__ package can be installed from Github:
+The __tidyomics__ package can be installed from GitHub:
 
 ```{r eval = FALSE}
 remotes::install_github("tidyomics/tidyomics")
 ```
 
-This will automatically install most packages in the _tidyomics_ ecosystem. The __plyinteractions__, __tidytof__ and __tidySpatialExperiment__ packages are not yet available for automatic installation. For the time being, they can be installed independently: 
+The __plyinteractions__, __tidySpatialExperiment__ and __tidytof__ packages are not yet available for automatic installation. For the time being, __plyinteractions__ and __tidySpatialExperiment__ can be installed independently: 
 
 ```{r eval = FALSE}
 BiocManager::install("tidyomics/plyinteractions")
-devtools::install_github("keyes-timothy/tidytof")
-devtools::install_github("william-hutchison/tidySpatialExperiment")
+BiocManager::install("william-hutchison/tidySpatialExperiment")
 ```
+
+And __tidytof__ can be installed via [GitHub](https://github.com/keyes-timothy/tidytof).
 
 ## Loading the _tidyomics_ ecosystem
 
 The core _tidyomics_ packages and supporting _tidyverse_ packages can be loaded with:
 
-```{r}
+```{r eval = FALSE}
 library(tidyomics)
 ```
 
 This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
 
-__plyinteractions__, __tidytof__ and __tidySpatialExperiment__ can be loaded independently:
+__plyinteractions__, __tidySpatialExperiment__ and __tidytof__ can be loaded independently:
 
 ```{r eval = FALSE}
 library(plyinteractions)
-library(tidytof)
 library(tidySpatialExperiment)
+library(tidytof)
 ```
 
 You are now ready to start using the _tidyomics_ ecosystem.

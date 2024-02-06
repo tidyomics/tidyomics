@@ -1,6 +1,6 @@
 Package: tidyomics
 Title: Easily install and load the tidyomics ecosystem
-Version: 0.99.2
+Version: 0.99.3
 Authors@R: c(
     person(given = "Stefano",
            family = "Mangiola",
@@ -54,4 +54,4 @@ Biarch: true
 biocViews: AssayDomain, Infrastructure, RNASeq, DifferentialExpression, GeneExpression, Normalization, Clustering, QualityControl, Sequencing, Transcription, Transcriptomics
 Config/testthat/edition: 3
 Encoding: UTF-8
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.0
