@@ -1,6 +1,6 @@
 Package: tidyomics
 Title: Easily install and load the tidyomics ecosystem
-Version: 0.99.6
+Version: 0.99.7
 Authors@R: c(
     person(given = "Stefano",
            family = "Mangiola",
