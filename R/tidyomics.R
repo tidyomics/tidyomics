@@ -16,3 +16,21 @@ release_bullets <- function() {
     '`tidyomics_dependency_dissuade()`'
   )
 }
+
+#' tidyomics
+#' 
+#' @description A helper package to install and attach the core packages of the tidyomics ecosystem.
+#' @export 
+#' @return No value is returned
+#' @examples
+#' \dontrun{
+#' # Install the core packages of the tidyomics ecosystem
+#' BiocManager::install("tidyomics")
+#' 
+#' # Attach the core packages of the tidyomics ecosystem
+#' library(tidyomics)
+#' }
+tidyomics <-
+  function() {
+    return(NULL)
+  }
