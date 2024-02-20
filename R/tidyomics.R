@@ -20,7 +20,6 @@ release_bullets <- function() {
 #' tidyomics
 #' 
 #' @description A helper package to install and attach the core packages of the tidyomics ecosystem.
-#' @importFrom BiocManager install
 #' @export 
 #' @return No value is returned
 #' @examples
