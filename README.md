@@ -12,33 +12,60 @@ core packages from the *tidyomics* ecosystem with a single command.
 
 The core packages are:
 
-<https://github.com/tidyomics/tidyomics/blob/690945b0ffa23c2b084a66c174fba5696028af87/R/attach.R#L3-L4>
+``` r
+tidyomics_packages()
+```
+
+    #   [1] "tidySummarizedExperiment" "tidySingleCellExperiment"
+    #   [3] "tidyseurat"               "tidybulk"                
+    #   [5] "plyranges"                "nullranges"              
+    #   [7] "purrr"                    "rlang"                   
+    #   [9] "stringr"                  "cli"                     
+    #  [11] "utils"                    "tidyomics"
+
+## The tidyomics ecosystem
+
+You can find out more about each package in the tidyomics ecosystem
+here:
+
+| Package                                                                             | Intro                                                                                         | GitHub                                                               | Description                                       |
+|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------------------------------------------------|
+| [tidybulk](https://stemangiola.github.io/tidybulk/)                                 | [Vignette](https://stemangiola.github.io/tidybulk/articles/introduction.html)                 | [GitHub](https://github.com/stemangiola/tidybulk/)                   | Tidy bulk RNA-seq data analysis                   |
+| [tidySummarizedExperiment](https://stemangiola.github.io/tidySummarizedExperiment/) | [Vignette](https://stemangiola.github.io/tidySummarizedExperiment/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidySummarizedExperiment)    | Tidy manipulation of SummarizedExperiment objects |
+| [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment)  | [Vignette](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidySingleCellExperiment)    | Tidy manipulation of SingleCellExperiment objects |
+| [tidySeurat](https://stemangiola.github.io/tidyseurat/)                             | [Vignette](https://stemangiola.github.io/tidyseurat/articles/introduction.html)               | [GitHub](https://github.com/stemangiola/tidyseurat)                  | Tidy manipulation of Seurat objects               |
+| [tidySpatialExperiment](https://william-hutchison.github.io/tidySpatialExperiment/) | [Vignette](https://william-hutchison.github.io/tidySpatialExperiment/articles/overview.html)  | [GitHub](https://github.com/william-hutchison/tidySpatialExperiment) | Tidy manipulation of SpatialExperiment objects    |
+| [plyranges](https://sa-lee.github.io/plyranges/)                                    | [Vignette](https://sa-lee.github.io/plyranges/articles/an-introduction.html)                  | [GitHub](https://github.com/sa-lee/plyranges)                        | Tidy manipulation of genomics ranges              |
+| [plyinteractions](https://tidyomics.github.io/plyinteractions/)                     | [Vignette](https://tidyomics.github.io/plyinteractions/articles/plyinteractions.html)         | [GitHub](https://github.com/tidyomics/plyinteractions)               | Tidy manipulation of genomic interactions         |
+| [nullranges](https://nullranges.github.io/nullranges/)                              | [Vignette](https://nullranges.github.io/nullranges/articles/nullranges.html)                  | [GitHub](https://github.com/nullranges/nullranges/)                  | Generation of null genomic range sets             |
 
 ## Installation
 
-The **tidyomics** package can be installed from GitHub:
+Installing the **tidyomics** package will install all core packages of
+the *tidyomics* ecosystem. The **tidyomics** package can be installed
+from Bioconductor:
 
 ``` r
-remotes::install_github("tidyomics/tidyomics")
+BiocManager::install("tidyomics")
 ```
 
-The **plyinteractions**, **tidySpatialExperiment** and **tidytof**
-packages are not yet available for automatic installation. For the time
-being, **plyinteractions** and **tidySpatialExperiment** can be
-installed independently:
+**plyinteractions** and **tidySpatialExperiment** are two new packages
+in the *tidyomics* ecosystem. **plyinteractions** and
+**tidySpatialExperiment** are both ready to use and are available in
+Bioconductor. The packages are now reaching maturity and will be added
+to the core packages for automatic installation mid-2024.
+
+For the time being, **plyinteractions** and **tidySpatialExperiment**
+can be installed independently:
 
 ``` r
-BiocManager::install("tidyomics/plyinteractions")
-BiocManager::install("william-hutchison/tidySpatialExperiment")
+BiocManager::install("plyinteractions")
+BiocManager::install("tidySpatialExperiment")
 ```
-
-And **tidytof** can be installed via
-[GitHub](https://github.com/keyes-timothy/tidytof).
 
 ## Loading the *tidyomics* ecosystem
 
-The core *tidyomics* packages and supporting *tidyverse* packages can be
-loaded with:
+The core *tidyomics* packages can be attached with:
 
 ``` r
 library(tidyomics)
@@ -48,13 +75,12 @@ This command also produces a summary of package versions and function
 conflicts. Function conflicts are a point of ongoing development and
 will be addressed over time.
 
-**plyinteractions**, **tidySpatialExperiment** and **tidytof** can be
-loaded independently:
+**plyinteractions** and **tidySpatialExperiment** can be loaded
+independently:
 
 ``` r
 library(plyinteractions)
 library(tidySpatialExperiment)
-library(tidytof)
 ```
 
 You are now ready to start using the *tidyomics* ecosystem.
