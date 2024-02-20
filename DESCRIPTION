@@ -38,10 +38,8 @@ Imports:
     rlang, 
     stringr,
     cli,
-    utils,
-    BiocManager
-Suggests:
-    tidyr,
+    utils
+Suggests:    tidyr,
     dplyr, 
     tibble, 
     ggplot2,
