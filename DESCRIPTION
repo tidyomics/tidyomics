@@ -38,7 +38,8 @@ Imports:
     rlang, 
     stringr,
     cli,
-    utils
+    utils,
+    BiocManager
 Suggests:
     tidyr,
     dplyr, 
@@ -54,4 +55,4 @@ Biarch: true
 biocViews: AssayDomain, Infrastructure, RNASeq, DifferentialExpression, GeneExpression, Normalization, Clustering, QualityControl, Sequencing, Transcription, Transcriptomics
 Config/testthat/edition: 3
 Encoding: UTF-8
-RoxygenNote: 7.3.0
+RoxygenNote: 7.3.1
