@@ -3,7 +3,7 @@
 
 ## Overview
 
-The [tidyomics](https://github.com/tidyomics) ecosystem is a set of
+The [*tidyomics*](https://github.com/tidyomics) ecosystem is a set of
 packages for omics data analysis that work together in harmony; they
 share common Bioconductor data representations and API design consistent
 with the [tidyverse](https://www.tidyverse.org/) ecosystem. The
@@ -25,7 +25,7 @@ tidyomics_packages()
 
 ## The tidyomics ecosystem
 
-You can find out more about each package in the tidyomics ecosystem
+You can find out more about each package in the *tidyomics* ecosystem
 here:
 
 | Package                                                                             | Intro                                                                                         | GitHub                                                               | Description                                       |
