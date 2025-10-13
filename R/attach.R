@@ -4,7 +4,7 @@ core <-
     # transcriptomics
     "tidySummarizedExperiment", "tidySingleCellExperiment", "tidySpatialExperiment", "tidyseurat", 
     
-    # Genomics
+    # genomics
     "plyranges", "plyinteractions"
   )
 
