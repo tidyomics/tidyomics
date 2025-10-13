@@ -17,8 +17,8 @@ tidyomics_packages()
 ```
 
     #   [1] "tidySummarizedExperiment" "tidySingleCellExperiment"
-    #   [3] "tidyseurat"               "tidybulk"                
-    #   [5] "plyranges"                "nullranges"              
+    #   [3] "tidySpatialExperiment"    "tidyseurat"              
+    #   [5] "plyranges"                "plyinteractions"         
     #   [7] "purrr"                    "rlang"                   
     #   [9] "stringr"                  "cli"                     
     #  [11] "utils"                    "tidyomics"
@@ -56,11 +56,13 @@ Bioconductor. The packages are now reaching maturity and will be added
 to the core packages for automatic installation mid-2024.
 
 For the time being, **plyinteractions** and **tidySpatialExperiment**
-can be installed independently:
+can be installed and loaded independently:
 
 ``` r
 BiocManager::install("plyinteractions")
 BiocManager::install("tidySpatialExperiment")
+library(plyinteractions)
+library(tidySpatialExperiment)
 ```
 
 ## Loading the *tidyomics* ecosystem
@@ -74,13 +76,5 @@ library(tidyomics)
 This command also produces a summary of package versions and function
 conflicts. Function conflicts are a point of ongoing development and
 will be addressed over time.
-
-**plyinteractions** and **tidySpatialExperiment** can be loaded
-independently:
-
-``` r
-library(plyinteractions)
-library(tidySpatialExperiment)
-```
 
 You are now ready to start using the *tidyomics* ecosystem.
