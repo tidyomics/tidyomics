@@ -1,7 +1,11 @@
 core <- 
   c(
-    "dplyr", "tidyr", "ggplot2", "tidySummarizedExperiment", "tidySingleCellExperiment", 
-    "tidyseurat", "tidybulk", "plyranges", "nullranges"
+    
+    # transcriptomics
+    "tidySummarizedExperiment", "tidySingleCellExperiment", "tidySpatialExperiment", "tidyseurat", 
+    
+    # Genomics
+    "plyranges", "plyinteractions"
   )
 
 #' @noRd
