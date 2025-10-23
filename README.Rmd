@@ -29,17 +29,31 @@ tidyomics::tidyomics_packages()
 
 ## The tidyomics ecosystem 
 
-You can find out more about each package in the tidyomics ecosystem here:
+### Core packages
+
+The core packages are automatically loaded when you run `library(tidyomics)`:
 
 | Package | Intro | GitHub | Description |
 |---|---|---|---|
-| [tidybulk](https://stemangiola.github.io/tidybulk/) | [Vignette](https://stemangiola.github.io/tidybulk/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidybulk/) | Tidy bulk RNA-seq data analysis |
 | [tidySummarizedExperiment](https://stemangiola.github.io/tidySummarizedExperiment/) | [Vignette](https://stemangiola.github.io/tidySummarizedExperiment/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidySummarizedExperiment) | Tidy manipulation of SummarizedExperiment objects |
 | [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment) | [Vignette](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidySingleCellExperiment) | Tidy manipulation of SingleCellExperiment objects |
 | [tidySeurat](https://stemangiola.github.io/tidyseurat/) | [Vignette](https://stemangiola.github.io/tidyseurat/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidyseurat) | Tidy manipulation of Seurat objects |
 | [tidySpatialExperiment](https://william-hutchison.github.io/tidySpatialExperiment/) | [Vignette](https://william-hutchison.github.io/tidySpatialExperiment/articles/overview.html) | [GitHub](https://github.com/william-hutchison/tidySpatialExperiment) | Tidy manipulation of SpatialExperiment objects |
 | [plyranges](https://sa-lee.github.io/plyranges/) | [Vignette](https://sa-lee.github.io/plyranges/articles/an-introduction.html) | [GitHub](https://github.com/sa-lee/plyranges) | Tidy manipulation of genomics ranges |
+
+### Additional manipulation packages
+
+| Package | Intro | GitHub | Description |
+|---|---|---|---|
 | [plyinteractions](https://tidyomics.github.io/plyinteractions/) | [Vignette](https://tidyomics.github.io/plyinteractions/articles/plyinteractions.html) | [GitHub](https://github.com/tidyomics/plyinteractions) | Tidy manipulation of genomic interactions |
+
+__plyinteractions__ is under evaluation for inclusion in the core packages in future Bioconductor releases.
+
+### Analysis packages
+
+| Package | Intro | GitHub | Description |
+|---|---|---|---|
+| [tidybulk](https://stemangiola.github.io/tidybulk/) | [Vignette](https://stemangiola.github.io/tidybulk/articles/introduction.html) | [GitHub](https://github.com/stemangiola/tidybulk/) | Tidy bulk RNA-seq data analysis |
 | [nullranges](https://nullranges.github.io/nullranges/) | [Vignette](https://nullranges.github.io/nullranges/articles/nullranges.html) | [GitHub](https://github.com/nullranges/nullranges/) | Generation of null genomic range sets | 
 
 ## Installation
@@ -50,13 +64,15 @@ Installing the __tidyomics__ package will install all core packages of the _tidy
 BiocManager::install("tidyomics")
 ```
 
-__plyinteractions__ and __tidySpatialExperiment__ are two new packages in the _tidyomics_ ecosystem. __plyinteractions__ and __tidySpatialExperiment__ are both ready to use and are available in Bioconductor. The packages are now reaching maturity and will be added to the core packages for automatic installation mid-2024. 
-
-For the time being, __plyinteractions__ and __tidySpatialExperiment__ can be installed independently: 
+Additional packages can be installed independently as needed:
 
 ```{r eval = FALSE}
+# Additional manipulation package
 BiocManager::install("plyinteractions")
-BiocManager::install("tidySpatialExperiment")
+
+# Analysis packages
+BiocManager::install("tidybulk")
+BiocManager::install("nullranges")
 ```
 
 ## Loading the _tidyomics_ ecosystem
@@ -69,11 +85,15 @@ library(tidyomics)
 
 This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
 
-__plyinteractions__ and __tidySpatialExperiment__ can be loaded independently:
+Additional packages can be loaded independently as needed:
 
 ```{r eval = FALSE}
+# Additional manipulation package
 library(plyinteractions)
-library(tidySpatialExperiment)
+
+# Analysis packages
+library(tidybulk)
+library(nullranges)
 ```
 
 You are now ready to start using the _tidyomics_ ecosystem.

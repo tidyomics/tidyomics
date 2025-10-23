@@ -1,6 +1,6 @@
 Package: tidyomics
 Title: Easily install and load the tidyomics ecosystem
-Version: 1.5.0
+Version: 1.5.1
 Authors@R: c(
     person(given = "Stefano",
            family = "Mangiola",
@@ -33,7 +33,6 @@ Imports:
     tidySpatialExperiment,
     tidyseurat,
     plyranges,
-    plyinteractions,
     purrr, 
     rlang, 
     stringr,
@@ -49,7 +48,8 @@ Suggests:
     rmarkdown (>= 2.20),
     testthat (>= 3.1.6),
     nullranges,
-    tidybulk
+    tidybulk,
+    plyinteractions
 VignetteBuilder:
     knitr
 Biarch: true
