@@ -5,7 +5,7 @@ core <-
     "tidySummarizedExperiment", "tidySingleCellExperiment", "tidySpatialExperiment", "tidyseurat", 
     
     # genomics
-    "plyranges", "plyinteractions"
+    "plyranges"
   )
 
 #' @noRd
