@@ -16,12 +16,9 @@ The core packages are:
 tidyomics_packages()
 ```
 
-    #   [1] "tidySummarizedExperiment" "tidySingleCellExperiment"
-    #   [3] "tidySpatialExperiment"    "tidyseurat"              
-    #   [5] "plyranges"                "plyinteractions"         
-    #   [7] "purrr"                    "rlang"                   
-    #   [9] "stringr"                  "cli"                     
-    #  [11] "utils"                    "tidyomics"
+    #  [1] "tidySummarizedExperiment" "tidySingleCellExperiment"
+    #  [3] "tidyseurat"               "plyranges"               
+    #  [5] "tidySpatialExperiment"
 
 ## The tidyomics ecosystem
 
@@ -86,16 +83,5 @@ library(tidyomics)
 This command also produces a summary of package versions and function
 conflicts. Function conflicts are a point of ongoing development and
 will be addressed over time.
-
-Additional packages can be loaded independently as needed:
-
-``` r
-# Additional manipulation package
-library(plyinteractions)
-
-# Analysis packages
-library(tidybulk)
-library(nullranges)
-```
 
 You are now ready to start using the *tidyomics* ecosystem.

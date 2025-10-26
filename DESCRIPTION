@@ -32,13 +32,13 @@ Imports:
     tidySingleCellExperiment,
     tidySpatialExperiment,
     tidyseurat,
-    plyranges,
+    plyranges
+Suggests: 
     purrr, 
     rlang, 
     stringr,
     cli,
-    utils
-Suggests: 
+    utils,
     tidyr,
     dplyr, 
     tibble, 

@@ -24,7 +24,7 @@ tidyomics_packages()
 
 ```{r, echo = FALSE}
 # Call tidyomics_packages before attaching tidyomics to preserve logical presentation order
-tidyomics::tidyomics_packages()
+tidyomics::tidyomics_packages(include_self = FALSE)
 ```
 
 ## The tidyomics ecosystem 
@@ -84,16 +84,5 @@ library(tidyomics)
 ```
 
 This command also produces a summary of package versions and function conflicts. Function conflicts are a point of ongoing development and will be addressed over time. 
-
-Additional packages can be loaded independently as needed:
-
-```{r eval = FALSE}
-# Additional manipulation package
-library(plyinteractions)
-
-# Analysis packages
-library(tidybulk)
-library(nullranges)
-```
 
 You are now ready to start using the _tidyomics_ ecosystem.
