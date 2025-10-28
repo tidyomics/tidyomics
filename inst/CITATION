@@ -1,0 +1,11 @@
+bibentry(
+  bibtype = "Article",
+  title = "The tidyomics ecosystem: enhancing omic data analyses",
+  author = "William J. Hutchison, Timothy J. Keyes, The tidyomics Consortium, Helena L. Crowell, Jacques Serizay, Charlotte Soneson, Eric S. Davis, Noriaki Sato, Lambda Moses, Boyd Tarlinton, Abdullah A. Nahid, Miha Kosmac, Quentin Clayssen, Victor Yuan, Wancen Mu, Ji-Eun Park, Izabela Mamede, Min Hyung Ryu, Pierre-Paul Axisa, Paulina Paiz, Chi-Lam Poon, Ming Tang, Raphael Gottardo, Martin Morgan, Stuart Lee, Michael Lawrence, Stephanie C. Hicks, Garry P. Nolan, Kara L. Davis, Anthony T. Papenfuss, Michael I. Love, Stefano Mangiola",
+  journal = "Nature Methods",
+  year = 2024,
+  volume = 21,
+  number = 7,
+  pages = "1166–1170",
+  doi = "https://doi.org/10.1038/s41592-024-02299-2"
+)
