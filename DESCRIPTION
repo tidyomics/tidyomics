@@ -32,12 +32,12 @@ Imports:
     tidySingleCellExperiment,
     tidySpatialExperiment,
     tidyseurat,
-    plyranges
-Suggests: 
+    plyranges,
     purrr, 
     rlang, 
     stringr,
     cli,
+Suggests: 
     utils,
     tidyr,
     dplyr, 
